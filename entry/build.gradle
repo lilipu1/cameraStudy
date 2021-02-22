@@ -1,0 +1,23 @@
+apply plugin: 'com.huawei.ohos.hap'
+ohos {
+    signingConfigs {
+        debug {
+            storeFile file('F:/harmony/CameraStudy/talkwebKey.p12')
+            storePassword '0000001A9C405B7C732619B3B837222F2BF6A9E123DBF55BE2C10E6ADDFE927681C07EEB2E659D55C91A'
+            keyAlias 'talkweb'
+            keyPassword '0000001AC2D861ADF222AAC9ECF5AE057C6F845436E0B95658B6DF8D58F0B3889B5B85B77EB6AAC895AF'
+            signAlg 'SHA256withECDSA'
+            profile file('F:/harmony/CameraStudy/cameraStudyDebug.p7b')
+            certpath file('F:/harmony/CameraStudy/talkwebCer.cer')
+        }
+    }
+    compileSdkVersion 4
+    defaultConfig {
+        compatibleSdkVersion 4
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.har'])
+    testCompile 'junit:junit:4.12'
+}

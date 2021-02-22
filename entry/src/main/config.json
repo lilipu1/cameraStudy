@@ -1,0 +1,64 @@
+{
+  "app": {
+    "bundleName": "com.example.camerastudy",
+    "vendor": "example",
+    "version": {
+      "code": 1,
+      "name": "1.0"
+    },
+    "apiVersion": {
+      "compatible": 4,
+      "target": 4,
+      "releaseType": "Beta1"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "com.example.camerastudy",
+    "name": ".MyApplication",
+    "reqPermissions": [
+      {
+        "name": "ohos.permission.CAMERA"
+      },
+      {
+        "name": "ohos.permission.MICROPHONE"
+      }
+    ],
+    "deviceType": [
+      "phone"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry"
+    },
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "orientation": "unspecified",
+        "name": "com.example.camerastudy.MainAbility",
+        "icon": "$media:icon",
+        "description": "$string:mainability_description",
+        "label": "CameraStudy",
+        "type": "page",
+        "launchType": "standard"
+      },
+      {
+        "orientation": "unspecified",
+        "name": "com.example.camerastudy.CameraViewAbility",
+        "label": "CameraStudy",
+        "type": "page",
+        "launchType": "standard"
+      }
+    ]
+  }
+}
